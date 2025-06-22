@@ -240,7 +240,8 @@ end
 M.private.sortedPairs = sortedPairs
 
 -- seed the random with a strongly varying seed
-math.randomseed(math.floor(os.clock()*1E11))
+math.floor((os.clock()*1E11) % 2147483647)
+
 
 local function randomizeTable( t )
     -- randomize the item orders of the table t
